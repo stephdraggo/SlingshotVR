@@ -224,3 +224,192 @@ Received Import Request.
 Start importing Assets/Materials/Target.prefab using Guid(ee454b39c9f2bf042959bcbd40a9ad67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c9f6c95730fc125c394a63e42b29bc9') in 0.006831 seconds
   Import took 0.009114 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 272.803877 seconds.
+  path: Assets/Scripts/TargetScore.cs
+  artifactKey: Guid(e5df9db6f118f8c42b01b2671006f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TargetScore.cs using Guid(e5df9db6f118f8c42b01b2671006f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a8953efd004037a35eafd8655e14c0f') in 0.007411 seconds
+  Import took 0.009598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.165912 seconds.
+  path: Assets/Scripts/TargetScore.cs
+  artifactKey: Guid(e5df9db6f118f8c42b01b2671006f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TargetScore.cs using Guid(e5df9db6f118f8c42b01b2671006f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29e0f61c9dbe1360b0acb900d48582ba') in 0.002721 seconds
+  Import took 0.005058 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 88.365155 seconds.
+  path: Assets/Scripts/TargetScore.cs
+  artifactKey: Guid(e5df9db6f118f8c42b01b2671006f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TargetScore.cs using Guid(e5df9db6f118f8c42b01b2671006f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d3f4d1fa2600730f085845bb1096553') in 0.002339 seconds
+  Import took 0.005718 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002287 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.882 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 78.5 MB.
+System memory in use after: 78.6 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1919.
+Total: 1.624900 ms (FindLiveObjects: 0.139500 ms CreateObjectMapping: 0.040700 ms MarkObjects: 1.428500 ms  DeleteObjects: 0.015300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.212513 seconds.
+  path: Assets/SteamVR/Models/vr_alien_hand.fbx
+  artifactKey: Guid(35bf13fffe3e1b54b9be7cf6d9808f97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SteamVR/Models/vr_alien_hand.fbx using Guid(35bf13fffe3e1b54b9be7cf6d9808f97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef83be1c24cc2564f7a7db5d1f1c423f') in 0.173675 seconds
+  Import took 0.176982 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/SteamVR/InteractionSystem/Samples/Models/Target.fbx
+  artifactKey: Guid(d385554d73e74444094a4927b4201f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SteamVR/InteractionSystem/Samples/Models/Target.fbx using Guid(d385554d73e74444094a4927b4201f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4591ab47739cd00bcf20071480923635') in 0.032398 seconds
+  Import took 0.035330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/SteamVR/InteractionSystem/Samples/BuggyBuddy/Lightcone.fbx
+  artifactKey: Guid(43c6bdf072a75974186a41645b0aaca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SteamVR/InteractionSystem/Samples/BuggyBuddy/Lightcone.fbx using Guid(43c6bdf072a75974186a41645b0aaca5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2641e8f899c1d1d159ed216700a633c4') in 0.041461 seconds
+  Import took 0.043808 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/SteamVR/InteractionSystem/Longbow/Models/Balloon.fbx
+  artifactKey: Guid(8c0fbd56181ea0843b1596b4cb0e5498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SteamVR/InteractionSystem/Longbow/Models/Balloon.fbx using Guid(8c0fbd56181ea0843b1596b4cb0e5498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4046e3234fd4ee1d7becd5ab5638957f') in 0.018055 seconds
+  Import took 0.021521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/SteamVR/InteractionSystem/Samples/JoeJeff/JoeJeff.fbx
+  artifactKey: Guid(f50eaab9ff2788842bdf5c2875f3778b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SteamVR/InteractionSystem/Samples/JoeJeff/JoeJeff.fbx using Guid(f50eaab9ff2788842bdf5c2875f3778b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae6b8330c331ca4fbb1ab0aca5607b2f') in 0.058405 seconds
+  Import took 0.062037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/SteamVR/InteractionSystem/SnapTurn/snapTurnFX.fbx
+  artifactKey: Guid(62dcc32f358950744a33cf3ced87eaed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SteamVR/InteractionSystem/SnapTurn/snapTurnFX.fbx using Guid(62dcc32f358950744a33cf3ced87eaed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd54b2efcb6c058522506a35829c8849') in 0.247611 seconds
+  Import took 0.250592 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002010 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.789 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.1 MB.
+System memory in use after: 90.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1927.
+Total: 1.474500 ms (FindLiveObjects: 0.145500 ms CreateObjectMapping: 0.040600 ms MarkObjects: 1.273000 ms  DeleteObjects: 0.014700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002001 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.784 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.6 MB.
+System memory in use after: 90.7 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1930.
+Total: 1.585500 ms (FindLiveObjects: 0.138700 ms CreateObjectMapping: 0.038500 ms MarkObjects: 1.396100 ms  DeleteObjects: 0.011500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 2483.194878 seconds.
+  path: Assets/Scripts/TargetScore.cs
+  artifactKey: Guid(e5df9db6f118f8c42b01b2671006f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TargetScore.cs using Guid(e5df9db6f118f8c42b01b2671006f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e1e793c42755b481a0cdb9aff26fc5') in 0.006243 seconds
+  Import took 0.009447 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.029141 seconds.
+  path: Assets/Scripts/TargetScore.cs
+  artifactKey: Guid(e5df9db6f118f8c42b01b2671006f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TargetScore.cs using Guid(e5df9db6f118f8c42b01b2671006f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e1e793c42755b481a0cdb9aff26fc5') in 0.002848 seconds
+  Import took 0.005364 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002015 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.794 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1386 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 90.9 MB.
+System memory in use after: 91.0 MB.
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1933.
+Total: 1.728000 ms (FindLiveObjects: 0.176400 ms CreateObjectMapping: 0.056500 ms MarkObjects: 1.479900 ms  DeleteObjects: 0.014400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 824.833939 seconds.
+  path: Assets/Scripts/TargetScore.cs
+  artifactKey: Guid(e5df9db6f118f8c42b01b2671006f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/TargetScore.cs using Guid(e5df9db6f118f8c42b01b2671006f727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '135ca90d237020e4152e0ed975bb3372') in 0.003996 seconds
+  Import took 0.006569 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
