@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+
 namespace Wakaba.VR
 {
     public static class VrUtils
