@@ -7,7 +7,7 @@ namespace Wakaba.VR
     [Serializable] public class VrInputEvent : UnityEvent<InputEventArgs> { }
 
     [Serializable]
-    public class InputEventArgs : MonoBehaviour
+    public class InputEventArgs 
     {
         /// <summary>The controller firing the event.</summary>
         public VrController controller;

@@ -90,6 +90,12 @@ namespace Wakaba.VR
             GameObject tracerObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
             GameObject cursorObj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
 
+            tracerObj.layer = LayerMask.NameToLayer("Ignore Raycast");
+            cursorObj.layer = LayerMask.NameToLayer("Ignore Raycast");
+
+            tracerObj.GetComponent<BoxCollider>().enabled = false;
+            cursorObj.GetComponent<SphereCollider>().enabled = false;
+
             tracer = tracerObj.transform;
             cursor = cursorObj.transform;
 

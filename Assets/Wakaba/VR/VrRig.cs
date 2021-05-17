@@ -32,7 +32,7 @@ namespace Wakaba.VR
             }
         }
 
-        private void Start()
+        private void Awake()
         {
             // Valitate all the transform components, aka Small-Brain-Proofing.
             ValidateComponent(leftController);

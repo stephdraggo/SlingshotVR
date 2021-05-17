@@ -75,7 +75,6 @@ GameObject:
   - component: {fileID: 7606027773219605619}
   - component: {fileID: 4555790021980388583}
   - component: {fileID: 5598358792546190029}
-  - component: {fileID: 4385411471302331341}
   - component: {fileID: 6799572439352787248}
   m_Layer: 0
   m_Name: Controller (Right)
@@ -113,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poseAction:
     actionPath: /actions/default/in/Pose
-    needsReinit: 0
+    needsReinit: 1
   inputSource: 2
   origin: {fileID: 0}
   onTransformUpdated:
@@ -232,18 +231,6 @@ MonoBehaviour:
   released:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4385411471302331341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2224759825339886244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 617a8b4d3ffcf1e42a7b4b86f43550d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &6799572439352787248
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -271,7 +258,6 @@ GameObject:
   - component: {fileID: 8727507679774086111}
   - component: {fileID: 8090751594432031022}
   - component: {fileID: 5377919939021839109}
-  - component: {fileID: 1411101420380434071}
   - component: {fileID: 5253615258656773608}
   m_Layer: 0
   m_Name: Controller (Left)
@@ -309,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poseAction:
     actionPath: /actions/default/in/Pose
-    needsReinit: 0
+    needsReinit: 1
   inputSource: 1
   origin: {fileID: 0}
   onTransformUpdated:
@@ -428,18 +414,6 @@ MonoBehaviour:
   released:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1411101420380434071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2224759826460882518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 617a8b4d3ffcf1e42a7b4b86f43550d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &5253615258656773608
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -797,6 +771,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000013038800862, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
+      propertyPath: updatePose
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013038800862, guid: 638779290bce1af49b356f33dcc6fccf, type: 3}
       propertyPath: skeletonAction.actionPath
       value: /actions/default/in/SkeletonLeftHand
       objectReference: {fileID: 0}
@@ -860,6 +838,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012125075130, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012051789102, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
+      propertyPath: updatePose
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000012051789102, guid: 6def53d002137b747aec0b29551e0e25, type: 3}
