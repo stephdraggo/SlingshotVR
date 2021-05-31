@@ -8,11 +8,14 @@ namespace Wakaba.VR.Interaction
         public Rigidbody Rigidbody { get; private set; }
         public Collider Collider { get; private set; }
         public Transform AttachPoint => attachPoint;
+        public InteractGrab Grabbed { get; private set; }
 
         [SerializeField] private bool isGrabbable = true;
         [SerializeField] private bool isTouchable = false;
         [SerializeField] private bool isUsable = false;
         [SerializeField] private SteamVrInputSource allowedSource = SteamVrInputSource.Any;
+
+        public void SetGrabbable(bool _grabbable) => isGrabbable = _grabbable;
 
         [Space]
 
@@ -44,14 +47,36 @@ namespace Wakaba.VR.Interaction
 
         private InteractEventArgs GenerateArgs(VrController _controller) => new InteractEventArgs(_controller, Rigidbody, Collider);
 
+        public void Freeze()
+        {
+            Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            Rigidbody.useGravity = false;
+            Rigidbody.velocity = Vector3.zero;
+            Rigidbody.angularVelocity = Vector3.zero;
+        }
+
+        public void UnFreeze()
+        {
+            Rigidbody.constraints = RigidbodyConstraints.None;
+            Rigidbody.useGravity = true;
+        }
+
         #region OnObject Actions
         public void OnObjectGrabbed(VrController _controller)
         {
-            if (isGrabbable && (_controller.InputSource == allowedSource || allowedSource == SteamVrInputSource.Any)) onGrabbed.Invoke(GenerateArgs(_controller));
+            if (isGrabbable && (_controller.InputSource == allowedSource || allowedSource == SteamVrInputSource.Any))
+            {
+                onGrabbed.Invoke(GenerateArgs(_controller));
+                Grabbed = _controller.GetComponent<InteractGrab>();
+            }
         }
-        public void OnObjectReleased(VrController _controller)
+        public virtual void OnObjectReleased(VrController _controller)
         {
-            if (isGrabbable && (_controller.InputSource == allowedSource || allowedSource == SteamVrInputSource.Any)) onReleased.Invoke(GenerateArgs(_controller));
+            if (isGrabbable && (_controller.InputSource == allowedSource || allowedSource == SteamVrInputSource.Any))
+            {
+                onReleased.Invoke(GenerateArgs(_controller));
+                Grabbed = null;
+            }
         }
         public void OnObjectTouched(VrController _controller)
         {

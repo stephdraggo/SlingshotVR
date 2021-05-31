@@ -15,6 +15,11 @@ namespace Wakaba.VR.Interaction
         // The held object's original parent before it got reparented to this controller.
         private Transform heldOriginalParent;
 
+        public void ForceRelease()
+        {
+            ReleaseObject();
+        }
+
         private void Start()
         {
             input = gameObject.GetComponent<VrControllerInput>();
@@ -40,11 +45,17 @@ namespace Wakaba.VR.Interaction
         private void GrabObject()
         {
             heldObject = collidingObject;
-            collidingObject = null;
 
+            if(heldObject.Grabbed != null)
+            {
+                heldObject.Grabbed.ForceRelease();
+            }
+
+            collidingObject = null;
             heldOriginalParent = heldObject.transform.parent;
 
-            heldObject.Rigidbody.isKinematic = true;
+            //heldObject.Rigidbody.isKinematic = true;
+            heldObject.Freeze();
             SnapObject(heldObject.transform, heldObject.AttachPoint);
 
             heldObject.OnObjectGrabbed(input.Controller);
@@ -53,8 +64,13 @@ namespace Wakaba.VR.Interaction
 
         private void ReleaseObject()
         {
-            heldObject.Rigidbody.isKinematic = false;
-            heldObject.transform.SetParent(heldOriginalParent);
+
+            //heldObject.Rigidbody.isKinematic = false;
+            heldObject.UnFreeze();
+            if (heldOriginalParent == null) heldObject.transform.SetParent(null);
+            else heldObject.transform.SetParent(heldOriginalParent);
+
+            heldObject.transform.SetPositionAndRotation(transform.position, transform.rotation);
 
             heldObject.Rigidbody.velocity = input.Controller.Velocity;
             heldObject.Rigidbody.angularVelocity = input.Controller.AngularVelocity;
