@@ -10,6 +10,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInputModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" />
+    </changedPaths>
+  </component>
   <component name="ProjectId" id="1se3fvVKQE93PIQc4flcti1gSPm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,6 +34,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -57,6 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1621219338225</updated>
       <workItem from="1621219363023" duration="638000" />
+      <workItem from="1622432712034" duration="3321000" />
     </task>
     <servers />
   </component>
