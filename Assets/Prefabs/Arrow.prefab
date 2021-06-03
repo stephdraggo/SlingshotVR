@@ -144,7 +144,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.025, y: 0.86, z: 0.025}
+  m_Size: {x: 0.025, y: 0.8, z: 0.025}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3561370426193268004
 MonoBehaviour:
@@ -181,6 +181,9 @@ MonoBehaviour:
   onUnused:
     m_PersistentCalls:
       m_Calls: []
+  ObjectSpawner: 0
+  objectToSpawn: {fileID: 0}
+  newColliderHeight: 0.3
 --- !u!1 &3561370426193268015
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,11 +5,28 @@ using Wakaba.VR.Interaction;
 
 public class Arrow : InteractableObject
 {
+    [Header("Arrow settings")]
+    [Tooltip("If not set to 0, will change the y value of the box collider when grabbed." +
+             "This is for preventing the arrow from colliding with the bow until it is closer" +
+             "If collider is not a box collider, this will be ignored.")]
+    [SerializeField] float newColliderHeight = 0;
+    private float baseColliderHeight;
+    private BoxCollider boxCollider;
+    
     //bow holding the arrow
     public Bow currentBow { get; set; }
     
     //controller holding the arrow while in the bow
     private InteractGrab holdingController = null;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        if (newColliderHeight == 0) return;
+        if (TryGetComponent<BoxCollider>(out boxCollider)) baseColliderHeight = ((BoxCollider) Collider).size.y;
+
+    }
 
     private void OnCollisionEnter(Collision _collision)
     {
@@ -89,6 +106,9 @@ public class Arrow : InteractableObject
     
     public override void OnObjectGrabbed(VrController _controller)
     {
+        //reduce the collider size so that the arrow needs to be closer to the bow to collide
+        if (boxCollider) boxCollider.size = new Vector3(boxCollider.size.x, newColliderHeight, boxCollider.size.z);
+        
         base.OnObjectGrabbed(_controller);
         //change layer so the arrow can collide with the bow
         gameObject.layer = 0;
@@ -96,6 +116,9 @@ public class Arrow : InteractableObject
 
     public override void OnObjectReleased(VrController _controller)
     {
+        //set the collider size back to the base size
+        if (boxCollider) boxCollider.size = new Vector3(boxCollider.size.x, baseColliderHeight, boxCollider.size.z);
+        
         base.OnObjectReleased(_controller);
         //set layer back to worldArrow to stop collision with bow
         gameObject.layer = 6;
