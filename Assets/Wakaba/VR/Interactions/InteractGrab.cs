@@ -32,7 +32,9 @@ namespace Wakaba.VR.Interaction
         private void SetCollidingObject(Collider _other)
         {
             InteractableObject interactable = _other.GetComponent<InteractableObject>();
+            
             if (collidingObject != null || interactable == null) return;
+            
             collidingObject = interactable;
         }
 
@@ -45,13 +47,13 @@ namespace Wakaba.VR.Interaction
 
         private void GrabObject()
         {
-            heldObject = collidingObject;
             
             //For switching hands, release the object in the other hand first
-            if(heldObject.Grabbed != null) heldObject.Grabbed.ForceRelease();
-
-            heldObject = collidingObject;
-
+            if (collidingObject.Grabbed != null) collidingObject.Grabbed.ForceRelease();
+            
+            //If the object is a spawner, grab the new spawned object, otherwise grab the object
+            heldObject = collidingObject.ObjectSpawner ? collidingObject.SpawnObject() : collidingObject;
+            
             collidingObject = null;
             if (heldObject.transform.parent != null) heldOriginalParent = heldObject.transform.parent;
 
@@ -97,5 +99,6 @@ namespace Wakaba.VR.Interaction
                 _object.rotation = attachPoint.transform.rotation * Quaternion.Euler(_attachPoint.localEulerAngles);
             }
         }
+        
     }
 }

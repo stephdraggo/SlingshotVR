@@ -16,7 +16,6 @@ namespace Wakaba.VR.Interaction
         [SerializeField] private SteamVrInputSource allowedSource = SteamVrInputSource.Any;
 
         public bool ThrowOnRelease { get; protected set; } = true;
-
         protected void SetGrabbable(bool _grabbable) => isGrabbable = _grabbable;
 
         [Space]
@@ -32,8 +31,27 @@ namespace Wakaba.VR.Interaction
         public InteractionEvent onCovid = new InteractionEvent();
         public InteractionEvent onUsed = new InteractionEvent();
         public InteractionEvent onUnused = new InteractionEvent();
+        
+        [Space]
+        
+        [Tooltip("If true, give a different object instead of this one when grabbed")]
+        public bool ObjectSpawner = false;
+        [SerializeField] protected InteractableObject objectToSpawn;
 
-        private void Start()
+        /// <summary>
+        /// Spawns the set object and returns it
+        /// </summary>
+        public InteractableObject SpawnObject()
+        {
+            if (!ObjectSpawner) return null;
+            if (!objectToSpawn) throw new System.Exception("Object set as object spawner but no object is set!");
+            
+            InteractableObject spawnedObject = Instantiate(objectToSpawn);
+
+            return spawnedObject;
+        }
+
+        private void Awake()
         {
             Rigidbody = gameObject.GetComponent<Rigidbody>();
 
