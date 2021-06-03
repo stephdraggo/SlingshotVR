@@ -42,7 +42,7 @@ namespace Wakaba.VR.Interaction
                 Debug.LogError($"Object {name} does not have a collider, adding BoxCollider.", gameObject);
             }
 
-            Debug.LogWarning("Please rename variable in InteractableObject.cs, you know which one.");
+            //Debug.LogWarning("Please rename variable in InteractableObject.cs, you know which one.");
         }
 
         private InteractEventArgs GenerateArgs(VrController _controller) => new InteractEventArgs(_controller, Rigidbody, Collider);

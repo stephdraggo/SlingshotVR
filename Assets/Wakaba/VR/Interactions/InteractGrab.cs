@@ -45,16 +45,14 @@ namespace Wakaba.VR.Interaction
         private void GrabObject()
         {
             heldObject = collidingObject;
-
-            if(heldObject.Grabbed != null)
-            {
-                heldObject.Grabbed.ForceRelease();
-            }
+            
+            //For switching hands, release the object in the other hand first
+            if(heldObject.Grabbed != null) heldObject.Grabbed.ForceRelease();
 
             collidingObject = null;
-            heldOriginalParent = heldObject.transform.parent;
+            if (heldObject.transform.parent != null) heldOriginalParent = heldObject.transform.parent;
 
-            //heldObject.Rigidbody.isKinematic = true;
+            //Stop the rigidbody without becoming kinematic so collisions can still be detected while held
             heldObject.Freeze();
             SnapObject(heldObject.transform, heldObject.AttachPoint);
 
@@ -64,16 +62,18 @@ namespace Wakaba.VR.Interaction
 
         private void ReleaseObject()
         {
-
-            //heldObject.Rigidbody.isKinematic = false;
             heldObject.UnFreeze();
             if (heldOriginalParent == null) heldObject.transform.SetParent(null);
             else heldObject.transform.SetParent(heldOriginalParent);
 
-            heldObject.transform.SetPositionAndRotation(transform.position, transform.rotation);
-
-            heldObject.Rigidbody.velocity = input.Controller.Velocity;
-            heldObject.Rigidbody.angularVelocity = input.Controller.AngularVelocity;
+            //If the held object is an arrow, release it from the bow
+            if (heldObject.TryGetComponent<Arrow>(out Arrow arrow)) arrow.ReleaseFromBow();
+            else
+            {
+                heldObject.transform.SetPositionAndRotation(transform.position, transform.rotation);
+                heldObject.Rigidbody.velocity = input.Controller.Velocity;
+                heldObject.Rigidbody.angularVelocity = input.Controller.AngularVelocity;
+            }
 
             heldObject.OnObjectReleased(input.Controller);
             released.Invoke(new InteractEventArgs(input.Controller, heldObject.Rigidbody, heldObject.Collider));
