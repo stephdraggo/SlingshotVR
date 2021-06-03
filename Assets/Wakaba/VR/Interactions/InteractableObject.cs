@@ -51,7 +51,7 @@ namespace Wakaba.VR.Interaction
             return spawnedObject;
         }
 
-        private void Awake()
+        protected virtual void Awake()
         {
             Rigidbody = gameObject.GetComponent<Rigidbody>();
 
@@ -61,8 +61,7 @@ namespace Wakaba.VR.Interaction
                 Collider = gameObject.AddComponent<BoxCollider>();
                 Debug.LogError($"Object {name} does not have a collider, adding BoxCollider.", gameObject);
             }
-
-            //Debug.LogWarning("Please rename variable in InteractableObject.cs, you know which one.");
+            
         }
 
         private InteractEventArgs GenerateArgs(VrController _controller) => new InteractEventArgs(_controller, Rigidbody, Collider);

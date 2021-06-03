@@ -1,9 +1,12 @@
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Wakaba.VR;
 using Wakaba.VR.Interaction;
 
 public class Bow : InteractableObject
 {
+    [Header("Bow settings")]
     [Tooltip("Default location for arrow to go to when put in the bow")]
     public Transform arrowPosition;
     
@@ -19,6 +22,46 @@ public class Bow : InteractableObject
     //multiplied by fire force when releasing an arrow
     private const float FireForceMultiplier = 100f;
     
+    [Header("Bowstring line renderer positions")]
+    [SerializeField] private Transform bowStringTopPos;
+    [SerializeField] private Transform bowStringMiddlePos;
+    [SerializeField] private Transform bowStringBottomPos;
+    private Transform bowStringBaseMiddlePos;
+
+    private float stringPullDistance;
+    private LineRenderer stringRenderer;
+    private bool useString;
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        //Check that string can be used
+        if (!GetComponent<LineRenderer>())
+        {
+            Debug.Log("No Line renderer attached, bowstring will not show");
+            return;
+        }
+        if (!(bowStringTopPos && bowStringMiddlePos && bowStringBottomPos))
+        {
+            Debug.Log("Bow string positions not set, bowstring will not show.");
+            return;
+        }
+        
+        //Setup the line renderer for the string
+        stringRenderer = gameObject.GetComponent<LineRenderer>();
+        stringRenderer.positionCount = 3;
+        useString = true;
+
+        //create a default middle position to use when pulling string back
+        bowStringBaseMiddlePos = new GameObject().transform;
+        bowStringBaseMiddlePos.SetParent(transform);
+        bowStringBaseMiddlePos.SetPositionAndRotation(bowStringMiddlePos.position, bowStringMiddlePos.rotation);
+        
+        UpdateStringRenderer();
+
+    }
+
     /// <summary>
     /// The current arrow equipped in this bow, null means no arrow equipped
     /// </summary>
@@ -70,7 +113,6 @@ public class Bow : InteractableObject
         
         //Get how far back the arrow is pulled
         float pullDistance = CalculateHandToNockPosDistance();
-
         pullDistance = Mathf.Clamp(pullDistance, 0f, arrowMaxPullDistance);
 
         //multiply by the firing force of the bow
@@ -85,22 +127,34 @@ public class Bow : InteractableObject
 
     private void Update()
     {
-        if (!CurrentArrow) return;
-        
-        //Get the local position of the arrow
-        Vector3 arrowPos = CurrentArrow.transform.localPosition;
-        
-        //default position of the arrow
-        float defaultZPos = arrowPosition.localPosition.z;
-        
-        //move the arrow off the default position based on distance from hand to the nock position
-        arrowPos.z = defaultZPos - CalculateHandToNockPosDistance();
+        if (CurrentArrow)
+        {
+            //Get the local position of the arrow
+            Vector3 arrowPos = CurrentArrow.transform.localPosition;
 
-        //Clamp the arrow so it can't go forwards or too far backwards
-        arrowPos.z = Mathf.Clamp(arrowPos.z, defaultZPos - arrowMaxPullDistance, defaultZPos);
+            //default position of the arrow
+            float defaultZPos = arrowPosition.localPosition.z;
+
+            //get the distance from the controller to the nock position
+            float pullDistance = CalculateHandToNockPosDistance();
+
+            //Clamp the position so the arrow can't go forwards or too far backwards
+            pullDistance = Mathf.Clamp(pullDistance, 0, arrowMaxPullDistance);
+
+            //set the string pull distance for the line renderer
+            stringPullDistance = pullDistance;
+
+            //offset the arrow position from the default position by the pull distance
+            arrowPos.z = defaultZPos - pullDistance;
+
+            //Set the local position of the arrow
+            CurrentArrow.transform.localPosition = arrowPos;
+        }
+        //no arrow equipped, string should straight
+        else stringPullDistance = 0;
         
-        //Set the local position of the arrow
-        CurrentArrow.transform.localPosition = arrowPos;
+        //Display the line renderer for the string
+        UpdateStringRenderer();
     }
 
     /// <summary>
@@ -113,5 +167,23 @@ public class Bow : InteractableObject
                                                                             arrowController.transform.position);
         //return z distance only (how far back hand is)
         return handBowDistance.z;
+    }
+
+    /// <summary>
+    /// Sets the positions of the line renderer for the string to their correct values
+    /// </summary>
+    void UpdateStringRenderer()
+    {
+        if (!useString) return;
+        
+        //Change the middle position based on the pull distance
+        Vector3 bowStringMiddlePosition = bowStringBaseMiddlePos.localPosition;
+        bowStringMiddlePosition.z -= stringPullDistance;
+        bowStringMiddlePos.localPosition = bowStringMiddlePosition;
+        
+        //Set the line renderer points
+        stringRenderer.SetPosition(0, bowStringTopPos.position);
+        stringRenderer.SetPosition(1, bowStringMiddlePos.position);
+        stringRenderer.SetPosition(2, bowStringBottomPos.position);
     }
 }
