@@ -14,6 +14,7 @@ namespace Wakaba.VR.Interaction
 
         // The held object's original parent before it got reparented to this controller.
         private Transform heldOriginalParent;
+        
 
         public void ForceRelease()
         {

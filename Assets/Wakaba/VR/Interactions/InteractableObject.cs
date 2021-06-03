@@ -62,7 +62,7 @@ namespace Wakaba.VR.Interaction
         }
 
         #region OnObject Actions
-        public void OnObjectGrabbed(VrController _controller)
+        public virtual void OnObjectGrabbed(VrController _controller)
         {
             if (isGrabbable && (_controller.InputSource == allowedSource || allowedSource == SteamVrInputSource.Any))
             {

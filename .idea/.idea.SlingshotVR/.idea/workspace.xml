@@ -9,9 +9,10 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bow.cs" />
       <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Interactions/InteractGrab.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Interactions/InteractableObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1tPoO2VcdRugSFOuKA4FmAl3SB4" />
@@ -65,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1622680052764</updated>
-      <workItem from="1622680056756" duration="3271000" />
+      <workItem from="1622680056756" duration="10221000" />
     </task>
     <servers />
   </component>

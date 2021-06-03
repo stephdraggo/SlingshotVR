@@ -1,3 +1,4 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using Wakaba.VR;
 using Wakaba.VR.Interaction;
@@ -10,6 +11,20 @@ public class Arrow : InteractableObject
     //controller holding the arrow while in the bow
     private InteractGrab holdingController = null;
 
+    #region layer
+    //while not in hand, do not collide with bow
+    public override void OnObjectGrabbed(VrController _controller)
+    {
+        base.OnObjectGrabbed(_controller);
+        gameObject.layer = 0;
+    }
+
+    public override void OnObjectReleased(VrController _controller)
+    {
+        base.OnObjectReleased(_controller);
+        gameObject.layer = 6;
+    }
+    #endregion
 
     private void OnCollisionEnter(Collision _collision)
     {
@@ -31,7 +46,6 @@ public class Arrow : InteractableObject
     {
         //Get parent controller
         holdingController = transform.parent.GetComponent<VrController>().GetComponent<InteractGrab>();
-        //controller.GetComponent<InteractGrab>().ForceRelease();
 
         //Set parent to bow and go to position
         transform.SetParent(_bow.transform);
@@ -42,7 +56,7 @@ public class Arrow : InteractableObject
         Rigidbody.isKinematic = true;
 
         //Set in bow
-        _bow.CurrentArrow = this;
+        _bow.EquipArrow(this, holdingController);
         currentBow = _bow;
 
         //Disable grabbing
