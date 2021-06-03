@@ -71,6 +71,8 @@ public class Bow : InteractableObject
         //Get how far back the arrow is pulled
         float pullDistance = CalculateHandToNockPosDistance();
 
+        pullDistance = Mathf.Clamp(pullDistance, 0f, arrowMaxPullDistance);
+
         //multiply by the firing force of the bow
         float outfireForce = pullDistance * fireForce * FireForceMultiplier;
 

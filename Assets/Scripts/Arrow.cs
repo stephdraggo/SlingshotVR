@@ -67,6 +67,7 @@ public class Arrow : InteractableObject
 
         //Detach from bow
         currentBow.CurrentArrow = null;
+        holdingController = null;
         currentBow = null;
 
         //unparent from bow

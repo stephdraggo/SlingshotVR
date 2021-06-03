@@ -92,7 +92,7 @@ namespace Wakaba.VR.Interaction
         }
         public virtual void OnObjectReleased(VrController _controller)
         {
-            if (isGrabbable && (_controller.InputSource == allowedSource || allowedSource == SteamVrInputSource.Any))
+            if (_controller.InputSource == allowedSource || allowedSource == SteamVrInputSource.Any)
             {
                 onReleased.Invoke(GenerateArgs(_controller));
                 Grabbed = null;

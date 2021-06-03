@@ -1342,13 +1342,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Longbow
       objectReference: {fileID: 0}
-    - target: {fileID: 6408051911121228028, guid: 71ae798780dbd1c42907058bbe4fb496, type: 3}
-      propertyPath: m_Size.z
-      value: 0.290416
-      objectReference: {fileID: 0}
-    - target: {fileID: 6408051911121228028, guid: 71ae798780dbd1c42907058bbe4fb496, type: 3}
-      propertyPath: m_Center.z
-      value: 0.048978448
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71ae798780dbd1c42907058bbe4fb496, type: 3}
