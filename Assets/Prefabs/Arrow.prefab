@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3561370426194465065}
   - component: {fileID: 3561370426195465193}
   m_Layer: 6
-  m_Name: polySurface2
+  m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3561370426193170699}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3561370426194465065
 MeshFilter:
@@ -111,8 +111,8 @@ Transform:
   m_LocalPosition: {x: 21.081, y: 1, z: 31.791}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3561370426193170697}
   - {fileID: 3561370426193170703}
+  - {fileID: 3561370426193170697}
   - {fileID: 3561370427342156360}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -144,7 +144,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.025, y: 0.8, z: 0.025}
+  m_Size: {x: 0.025, y: 0.7, z: 0.025}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3561370426193268004
 MonoBehaviour:
@@ -184,6 +184,8 @@ MonoBehaviour:
   ObjectSpawner: 0
   objectToSpawn: {fileID: 0}
   newColliderHeight: 0.3
+  tipPosition: {fileID: 3561370426193170703}
+  tipHitRadius: 0.1
 --- !u!1 &3561370426193268015
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +198,7 @@ GameObject:
   - component: {fileID: 3561370426194465071}
   - component: {fileID: 3561370426195465199}
   m_Layer: 6
-  m_Name: tip
+  m_Name: Tip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,11 +212,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3561370426193268015}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.37857613, z: 0}
+  m_LocalPosition: {x: 0, y: -0.37857613, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3561370426193170699}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3561370426194465071
 MeshFilter:
@@ -275,7 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3561370427342156360}
   m_Layer: 6
-  m_Name: Attach point
+  m_Name: Controller Attach Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

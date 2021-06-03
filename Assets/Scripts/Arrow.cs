@@ -12,6 +12,12 @@ public class Arrow : InteractableObject
     [SerializeField] float newColliderHeight = 0;
     private float baseColliderHeight;
     private BoxCollider boxCollider;
+
+    [SerializeField] private Transform tipPosition;
+    [SerializeField] private float tipHitRadius = 0.075f;
+    
+    //If true, the arrow will stick in things when it hits them
+    bool fired;
     
     //bow holding the arrow
     public Bow currentBow { get; set; }
@@ -30,18 +36,34 @@ public class Arrow : InteractableObject
 
     private void OnCollisionEnter(Collision _collision)
     {
-        //check collision is with bow
-        if (!_collision.gameObject.TryGetComponent(out Bow bow)) return;
+        //collision with bow
+        if (_collision.gameObject.TryGetComponent(out Bow bow))
+        {
+            //if the bow or arrow are not being held, return
+            if (!transform.GetComponentInParent<VrController>()) return;
+            if (!bow.GetComponentInParent<VrController>()) return;
+
+            //if the bow already has an arrow, return
+            if (bow.CurrentArrow != null) return;
+
+            //attach arrow to bow
+            AttachToBow(bow);
+        }
+        else
+        {
+            //collision with object after firing
+            if (fired)
+            {
+                //Default (trees, ground etc.)
+                LayerMask mask = LayerMask.GetMask("Default");
+                //If collision with default near tip, set rigidbody to kinematic so the arrow sticks
+                if (Physics.OverlapSphere(tipPosition.position, tipHitRadius, mask).Length > 0) Rigidbody.isKinematic = true;
+                //Tip didn't hit, don't stick
+                else fired = false;
+            }
+        }
         
-        //if the bow or arrow are not being held, return
-        if (!transform.GetComponentInParent<VrController>()) return;
-        if (!bow.GetComponentInParent<VrController>()) return;
-
-        //if the bow already has an arrow, return
-        if (bow.CurrentArrow != null) return;
-
-        //attach arrow to bow
-        AttachToBow(bow);
+        
     }
 
     /// <summary>
@@ -96,6 +118,9 @@ public class Arrow : InteractableObject
         //release the arrow
         Rigidbody.AddForce(fireForce);
         
+        //Set fired so that the arrow sticks in objects it hits
+        if (fireForce.magnitude > 0) fired = true;
+        
         //Arrow can be thrown again when not in bow
         ThrowOnRelease = true;
 
@@ -108,6 +133,10 @@ public class Arrow : InteractableObject
     {
         //reduce the collider size so that the arrow needs to be closer to the bow to collide
         if (boxCollider) boxCollider.size = new Vector3(boxCollider.size.x, newColliderHeight, boxCollider.size.z);
+
+        //When pulling arrow out of something, unstick it
+        fired = false;
+        Rigidbody.isKinematic = false;
         
         base.OnObjectGrabbed(_controller);
         //change layer so the arrow can collide with the bow
