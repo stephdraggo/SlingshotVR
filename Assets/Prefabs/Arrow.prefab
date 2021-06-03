@@ -185,7 +185,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 0}
   newColliderHeight: 0.3
   tipPosition: {fileID: 3561370426193170703}
-  tipHitRadius: 0.1
+  tipHitRadius: 0.15
 --- !u!1 &3561370426193268015
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,12 +46,19 @@ namespace Wakaba.VR.Interaction
 
         private void GrabObject()
         {
+            //If the object is a spawner
+            if (collidingObject.ObjectSpawner)
+            {
+                //spawn the object
+                heldObject = collidingObject.SpawnObject();
+                //if the object could not be spawned, do not grab anything
+                if (heldObject == null) return;
+            }
+            //object is not a spawner, grab it
+            else heldObject = collidingObject;
             
             //For switching hands, release the object in the other hand first
             if (collidingObject.Grabbed != null) collidingObject.Grabbed.ForceRelease();
-            
-            //If the object is a spawner, grab the new spawned object, otherwise grab the object
-            heldObject = collidingObject.ObjectSpawner ? collidingObject.SpawnObject() : collidingObject;
             
             collidingObject = null;
             if (heldObject.transform.parent != null) heldOriginalParent = heldObject.transform.parent;

@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 using SteamVrInputSource = Valve.VR.SteamVR_Input_Sources;
 namespace Wakaba.VR.Interaction
@@ -34,9 +35,11 @@ namespace Wakaba.VR.Interaction
         
         [Space]
         
+        [Header("Spawner Settings")]
         [Tooltip("If true, give a different object instead of this one when grabbed")]
         public bool ObjectSpawner = false;
         [SerializeField] protected InteractableObject objectToSpawn;
+        
 
         /// <summary>
         /// Spawns the set object and returns it
@@ -46,10 +49,18 @@ namespace Wakaba.VR.Interaction
             if (!ObjectSpawner) return null;
             if (!objectToSpawn) throw new System.Exception("Object set as object spawner but no object is set!");
             
+            //different types of spawners can override to have conditions for taking
+            if (!TryTakeSpawnedObject()) return null;
+            
             InteractableObject spawnedObject = Instantiate(objectToSpawn);
 
+            OnTakeSpawnedObject(spawnedObject);
             return spawnedObject;
         }
+
+        protected virtual bool TryTakeSpawnedObject() => true;
+
+        protected virtual void OnTakeSpawnedObject(InteractableObject _object) {}
 
         protected virtual void Awake()
         {
@@ -97,6 +108,7 @@ namespace Wakaba.VR.Interaction
                 Grabbed = null;
             }
         }
+
         public void OnObjectTouched(VrController _controller)
         {
             if (isTouchable && (_controller.InputSource == allowedSource || allowedSource == SteamVrInputSource.Any)) onTouched.Invoke(GenerateArgs(_controller));

@@ -7,13 +7,22 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/varve/OneDrive/Documents/Diploma/SlingshotVR/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Quiver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Interactions/InteractableObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bow.cs" />
       <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Interactions/InteractGrab.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Quiver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/HittableObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Balloon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GameControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Arrow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Interactions/InteractableObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Quiver.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Bow.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1tPoO2VcdRugSFOuKA4FmAl3SB4" />
@@ -68,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622680052764</updated>
       <workItem from="1622680056756" duration="25053000" />
-      <workItem from="1622706721561" duration="2107000" />
+      <workItem from="1622706721561" duration="10647000" />
     </task>
     <servers />
   </component>
