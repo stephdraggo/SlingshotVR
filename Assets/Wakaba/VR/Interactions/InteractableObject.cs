@@ -15,7 +15,9 @@ namespace Wakaba.VR.Interaction
         [SerializeField] private bool isUsable = false;
         [SerializeField] private SteamVrInputSource allowedSource = SteamVrInputSource.Any;
 
-        public void SetGrabbable(bool _grabbable) => isGrabbable = _grabbable;
+        public bool ThrowOnRelease { get; protected set; } = true;
+
+        protected void SetGrabbable(bool _grabbable) => isGrabbable = _grabbable;
 
         [Space]
 

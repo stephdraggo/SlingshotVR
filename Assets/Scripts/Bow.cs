@@ -2,7 +2,6 @@ using UnityEngine;
 using Wakaba.VR;
 using Wakaba.VR.Interaction;
 
-
 public class Bow : InteractableObject
 {
     [Tooltip("Default location for arrow to go to when put in the bow")]
@@ -13,6 +12,12 @@ public class Bow : InteractableObject
 
     [Tooltip("How far back the arrow can be pulled")]
     [SerializeField] private float arrowMaxPullDistance = 0.6f;
+
+    [Tooltip("How much force to release arrows with, multiplied by pull distance")]
+    [SerializeField] private float fireForce = 20f;
+
+    //multiplied by fire force when releasing an arrow
+    private const float FireForceMultiplier = 100f;
     
     /// <summary>
     /// The current arrow equipped in this bow, null means no arrow equipped
@@ -54,8 +59,26 @@ public class Bow : InteractableObject
         
         //Set the position of the nocked position to where the controller is
         arrowNockedPosition.SetPositionAndRotation(_heldController.transform.position, transform.rotation);
+    }
+
+    /// <summary>
+    /// Returns the force an arrow should be fired with when released from this bow, based on how far back it is pulled
+    /// </summary>
+    public Vector3 GetFireForce()
+    {
+        if (!CurrentArrow) return Vector3.zero;
         
+        //Get how far back the arrow is pulled
+        float pullDistance = CalculateHandToNockPosDistance();
+
+        //multiply by the firing force of the bow
+        float outfireForce = pullDistance * fireForce * FireForceMultiplier;
+
+        //multiply by the direction the bow is facing
+        Vector3 fireForceVector = new Vector3(transform.forward.x * outfireForce, transform.forward.y * outfireForce,
+            transform.forward.z * outfireForce);
         
+        return fireForceVector;
     }
 
     private void Update()
@@ -78,6 +101,9 @@ public class Bow : InteractableObject
         CurrentArrow.transform.localPosition = arrowPos;
     }
 
+    /// <summary>
+    /// Returns the how far back the controller is from where the arrow was nocked
+    /// </summary>
     private float CalculateHandToNockPosDistance()
     {
         //Get distance between nock position and hand

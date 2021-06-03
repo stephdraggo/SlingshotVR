@@ -50,6 +50,8 @@ namespace Wakaba.VR.Interaction
             //For switching hands, release the object in the other hand first
             if(heldObject.Grabbed != null) heldObject.Grabbed.ForceRelease();
 
+            heldObject = collidingObject;
+
             collidingObject = null;
             if (heldObject.transform.parent != null) heldOriginalParent = heldObject.transform.parent;
 
@@ -67,9 +69,7 @@ namespace Wakaba.VR.Interaction
             if (heldOriginalParent == null) heldObject.transform.SetParent(null);
             else heldObject.transform.SetParent(heldOriginalParent);
 
-            //If the held object is an arrow, release it from the bow
-            if (heldObject.TryGetComponent<Arrow>(out Arrow arrow)) arrow.ReleaseFromBow();
-            else
+            if (heldObject.ThrowOnRelease)
             {
                 heldObject.transform.SetPositionAndRotation(transform.position, transform.rotation);
                 heldObject.Rigidbody.velocity = input.Controller.Velocity;
