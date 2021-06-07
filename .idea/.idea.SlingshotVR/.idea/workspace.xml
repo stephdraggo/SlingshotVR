@@ -24,6 +24,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" />
       <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Pointer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bow/GameControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Movment/CamMove.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1se3fvVKQE93PIQc4flcti1gSPm" />
@@ -75,7 +76,7 @@
       <updated>1621219338225</updated>
       <workItem from="1621219363023" duration="638000" />
       <workItem from="1622432712034" duration="3321000" />
-      <workItem from="1623024880347" duration="1507000" />
+      <workItem from="1623024880347" duration="2903000" />
     </task>
     <servers />
   </component>
