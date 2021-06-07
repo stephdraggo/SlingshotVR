@@ -12,7 +12,7 @@ namespace Bow
         [SerializeField] private int score;
         private void Awake()
         {
-            VrUtils.SetVREnabled(useVR);
+            if (useVR) VrUtils.SetVREnabled(true);
             if (!instance) instance = this;
             else Destroy(this);
         }

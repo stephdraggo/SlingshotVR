@@ -35,7 +35,14 @@ namespace PCBuild
         private void OnTriggerEnter(Collider _other)
         {
             if (_other.TryGetComponent(out HittableObject hittableObject))
-                OnHittableObjectCollision(hittableObject);
+            {
+                if (OnHittableObjectCollision(hittableObject))
+                {
+                    rigidbody.isKinematic = true;
+                    shootForce = 0;
+                }
+            }
+
         }
 
         private void OnCollisionEnter(Collision _other)
@@ -43,7 +50,15 @@ namespace PCBuild
             LayerMask layerCollided = _other.gameObject.layer;
             int layer = layerCollided.value;
             
-            if(layer == 0)
+            if (_other.gameObject.TryGetComponent(out HittableObject hittableObject))
+            {
+                if (OnHittableObjectCollision(hittableObject))
+                {
+                    rigidbody.isKinematic = true;
+                    shootForce = 0;
+                }
+            }
+            else if(layer == 0)
             {
                 rigidbody.isKinematic = true;
                 shootForce = 0;

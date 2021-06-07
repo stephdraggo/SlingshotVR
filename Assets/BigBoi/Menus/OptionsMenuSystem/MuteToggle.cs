@@ -21,7 +21,11 @@ namespace BigBoi.Menus.OptionsMenuSystem
 
         void Start()
         {
-            if (mixer == null) throw new NullReEx("No audio mixer attached."); //if no slider
+            if (mixer == null)
+            {
+                return;
+                throw new NullReEx("No audio mixer attached."); //if no slider
+            }
             if (string.IsNullOrEmpty(exposedParamName)) throw new NullReEx("No exposed volume parameter named."); //if no exposed parameter named
 
             saveName = exposedParamName + "Toggle"; //generate save name
