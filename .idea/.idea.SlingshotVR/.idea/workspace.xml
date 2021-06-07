@@ -26,6 +26,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerShoot.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PC/PlayerShoot.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PC/PCArrow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PC/MouseLook.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1se3fvVKQE93PIQc4flcti1gSPm" />

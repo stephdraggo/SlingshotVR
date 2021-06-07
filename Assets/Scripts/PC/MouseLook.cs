@@ -39,7 +39,6 @@ public class MouseLook : MonoBehaviour
 
     public void SetMouseVisible(bool _visible)
     {
-        Debug.Log("Hiding mouse");
         Cursor.visible = _visible;
         Cursor.lockState = _visible ? CursorLockMode.None : CursorLockMode.Locked;
     }
