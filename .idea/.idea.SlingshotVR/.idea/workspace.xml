@@ -11,8 +11,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PC/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PC/PlayerShoot.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -23,6 +22,10 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PC/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bow/GameControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PCArrow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerShoot.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PC/PlayerShoot.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PC/PCArrow.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1se3fvVKQE93PIQc4flcti1gSPm" />
