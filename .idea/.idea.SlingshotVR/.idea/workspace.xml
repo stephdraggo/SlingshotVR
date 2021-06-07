@@ -11,16 +11,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PC/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInput.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInputModule.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" />
       <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Pointer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PC/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/GameControl.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1se3fvVKQE93PIQc4flcti1gSPm" />
