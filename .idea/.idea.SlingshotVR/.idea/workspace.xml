@@ -11,6 +11,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
@@ -21,6 +23,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInputModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" />
       <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Pointer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/GameControl.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1se3fvVKQE93PIQc4flcti1gSPm" />
@@ -72,7 +75,7 @@
       <updated>1621219338225</updated>
       <workItem from="1621219363023" duration="638000" />
       <workItem from="1622432712034" duration="3321000" />
-      <workItem from="1623024880347" duration="749000" />
+      <workItem from="1623024880347" duration="1507000" />
     </task>
     <servers />
   </component>
