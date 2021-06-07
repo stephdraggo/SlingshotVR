@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="56e51a94-8713-4796-9c6c-3ddf97945cd8" name="Default Changelist" comment="" />
+    <list default="true" id="a9fef284-fcc4-4f92-beb5-8a62723fe887" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/varve/OneDrive/Documents/Diploma/SlingshotVR/Assets/Scripts/Arrow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Interactions/InteractGrab.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Quiver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bow.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/HittableObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Arrow.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Balloon.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GameControl.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Arrow.cs" />
-      <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Interactions/InteractableObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Quiver.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Bow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInputModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Pointer.cs" />
     </changedPaths>
   </component>
-  <component name="ProjectId" id="1tPoO2VcdRugSFOuKA4FmAl3SB4" />
+  <component name="ProjectId" id="1se3fvVKQE93PIQc4flcti1gSPm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -35,18 +33,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
-    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../../Desktop/VR Build\SlingshotVR.exe" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="C:\Users\varve\OneDrive\Desktop\VR Build" />
-      <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
-      <method v="2" />
-    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -71,13 +65,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="56e51a94-8713-4796-9c6c-3ddf97945cd8" name="Default Changelist" comment="" />
-      <created>1622680052764</created>
+      <changelist id="a9fef284-fcc4-4f92-beb5-8a62723fe887" name="Default Changelist" comment="" />
+      <created>1621219338225</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1622680052764</updated>
-      <workItem from="1622680056756" duration="25053000" />
-      <workItem from="1622706721561" duration="10647000" />
+      <updated>1621219338225</updated>
+      <workItem from="1621219363023" duration="638000" />
+      <workItem from="1622432712034" duration="3321000" />
+      <workItem from="1623024880347" duration="749000" />
     </task>
     <servers />
   </component>

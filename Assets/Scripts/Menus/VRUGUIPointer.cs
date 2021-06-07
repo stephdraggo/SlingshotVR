@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using Wakaba.VR;
 
 namespace SlingShotVR.Menus
 {
@@ -14,7 +15,7 @@ namespace SlingShotVR.Menus
 
         [SerializeField] private LayerMask uiMask = LayerMask.NameToLayer("UI");
 
-        //[SerializeField] private Pointer pointer;
+        [SerializeField] private Pointer pointer;
         private VRInputModule inputModule;
 
         void Start()
@@ -36,7 +37,7 @@ namespace SlingShotVR.Menus
             }
 
             inputModule.ControllerPosition = position;
-            //if (pointer != null) pointer.Active = hitUi;
+            if (pointer != null) pointer.Active = hitUi;
         }
     }
 }

@@ -6,7 +6,7 @@ namespace Wakaba.VR
         private const float TracerWidth = 0.025f;
 
         public Vector3 EndPoint { get; private set; } = Vector3.zero;
-        public bool Active { get; private set; } = false;
+        public bool Active { get;  set; } = false;
 
         public VrController controller;
 
