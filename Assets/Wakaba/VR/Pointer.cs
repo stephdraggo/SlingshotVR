@@ -32,8 +32,11 @@ namespace Wakaba.VR
 
         private void Update()
         {
+            tracer.gameObject.SetActive(Active);
+            cursor.gameObject.SetActive(Active);
+            
             if (!Active) return;
-
+            
             bool didHit = Physics.Raycast(controller.transform.position, controller.transform.forward, out RaycastHit hit);
             EndPoint = didHit ? hit.point : Vector3.zero;
             UpdateScalePos(hit, didHit);

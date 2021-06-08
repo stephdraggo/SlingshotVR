@@ -1,10 +1,12 @@
 using UnityEngine;
+using Wakaba.VR;
 
 namespace Bow
 {
     public class GameControl : MonoBehaviour
     {
         private static GameControl instance;
+        [SerializeField] private bool useVR;
 
         [SerializeField] private bool inVR = true;
 
@@ -14,6 +16,7 @@ namespace Bow
 
         private void Awake()
         {
+            if (useVR) VrUtils.SetVREnabled(true);
             if (!instance) instance = this;
             else Destroy(this);
             Wakaba.VR.VrUtils.SetVREnabled(inVR);

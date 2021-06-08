@@ -16,7 +16,7 @@ namespace SlingShotVR.Menus
 
         private GameObject currentObject = null;
         private PointerEventData data = null;
-        private new Camera camera;
+        [SerializeField] private new Camera camera;
 
         protected override void Awake()
         {
@@ -30,9 +30,10 @@ namespace SlingShotVR.Menus
             base.Start();
 
             //camera = VrRig.instance.Headset.GetComponent<Camera>();
-            //camera = FindObjectOfType<Camera>();
-            camera = Camera.main;
+            if (!camera) camera = FindObjectOfType<Camera>();
+            //camera = Camera.main;
         }
+        
 
         //update loop for input modules
         public override void Process()
@@ -48,12 +49,12 @@ namespace SlingShotVR.Menus
 
             //hover
             HandlePointerExitAndEnter(data, currentObject);
-
+            
+            
+            
             if (ControllerButtonDown) ProcessPress();
             if (ControllerButtonUp) ProcessRelease();
-
-            ControllerButtonDown = false;
-            ControllerButtonUp = false;
+            
         }
 
         private void ProcessPress()
@@ -71,6 +72,8 @@ namespace SlingShotVR.Menus
             data.pressPosition = data.position;
             data.pointerPress = newPointerPress;
             data.rawPointerPress = currentObject;
+
+            ControllerButtonDown = false;
         }
 
         private void ProcessRelease()
@@ -88,6 +91,8 @@ namespace SlingShotVR.Menus
             data.pressPosition = Vector2.zero;
             data.pointerPress = null;
             data.rawPointerPress = null;
+
+            ControllerButtonUp = false;
         }
     }
 }
