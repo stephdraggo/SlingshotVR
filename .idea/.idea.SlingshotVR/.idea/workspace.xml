@@ -14,26 +14,29 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PC/PlayerShoot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82EC470C-9131-4935-8AD0-C83AD628910C/d4/0caef474/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/VRLoadScene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pause.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInput.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PC/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/GameControl.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PCArrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PlayerShoot.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PC/PlayerShoot.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PC/MouseLook.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/PC/PCArrow.cs" />
-      <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Pointer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInputModule.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/LoadLevel.cs" />
       <option value="$PROJECT_DIR$/Assets/BigBoi/Menus/OptionsMenuSystem/VolumeSlider.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Bow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Arrow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRLoadScene.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Bow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/GameControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Wakaba/VR/VrControllerInput.cs" />
+      <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Pointer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Pause.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1se3fvVKQE93PIQc4flcti1gSPm" />
@@ -95,6 +98,8 @@
       <workItem from="1622432712034" duration="3321000" />
       <workItem from="1623024880347" duration="749000" />
       <workItem from="1623058382392" duration="964000" />
+      <workItem from="1623060483716" duration="489000" />
+      <workItem from="1623132067923" duration="3239000" />
     </task>
     <servers />
   </component>
