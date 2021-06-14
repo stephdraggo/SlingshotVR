@@ -59,8 +59,6 @@ namespace SlingShotVR.Menus
 
         private void ProcessPress()
         {
-            Debug.Log("OwO");
-
             data.pointerPressRaycast = data.pointerCurrentRaycast;
 
             GameObject newPointerPress =
@@ -78,8 +76,6 @@ namespace SlingShotVR.Menus
 
         private void ProcessRelease()
         {
-            Debug.Log("UwU");
-
             ExecuteEvents.Execute(data.pointerPress, data, ExecuteEvents.pointerUpHandler);
 
             GameObject pointerUpHandler = ExecuteEvents.GetEventHandler<IPointerClickHandler>(currentObject);

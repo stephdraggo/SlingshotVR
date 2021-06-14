@@ -112,11 +112,13 @@ namespace Bow
             }
             
             //call the hit function
-            _object.OnArrowHit();
+            _object.OnArrowHit(this);
 
             return stick;
         }
-        
+
+        public int scoreFromHit { get; set; }
+
         #endregion
 
         #region bow interactions
@@ -154,6 +156,8 @@ namespace Bow
         public void ReleaseFromBow()
         {
             if (!currentBow) return;
+
+            scoreFromHit = 0;
 
             //get the force at which the arrow should be released
             Vector3 fireForce = currentBow.GetFireForce();

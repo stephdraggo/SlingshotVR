@@ -14,7 +14,7 @@ namespace Bow
 
         [SerializeField] private ArrowEffect arrowEffect;
         public ArrowEffect ArrowEffect => arrowEffect;
-        public virtual void OnArrowHit() {}
+        public virtual void OnArrowHit(Arrow _arrow = null) {}
     }
 }
 

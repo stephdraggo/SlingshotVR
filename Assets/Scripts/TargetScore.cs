@@ -3,20 +3,30 @@ namespace Bow
 {
     public class TargetScore : HittableObject
     {
-        int score = 0;
+        [SerializeField] int score = 0;
         int tempScore = 0;
 
         //private void Start() => Debug.LogWarning($"Change the {gameObject.name}'s OnCollisionEnter function to appropriately find arrow.");
 
-        public override void OnArrowHit()
+        public override void OnArrowHit(Arrow _arrow)
         {
-            Stab();
+            if (_arrow)
+            {
+                Debug.Log("Collision with " + score);
+                if (_arrow.scoreFromHit < score)
+                {
+                    GameControl.AddScore(score - _arrow.scoreFromHit);
+                    _arrow.scoreFromHit = score;
+                }
+            }
         }
         void Stab()
         {
-
+            
+            
         }
-        private void OnCollisionEnter(Collision _collision)
+        
+        /*private void OnCollisionEnter(Collision _collision)
         {
             if (_collision.gameObject.CompareTag("Arrow"))
             {
@@ -31,5 +41,6 @@ namespace Bow
                 GameControl.AddScore(score);
             }
         }
+        */
     }
 }

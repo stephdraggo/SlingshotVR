@@ -5,7 +5,7 @@ namespace Bow
     public class Balloon : HittableObject
     {
         [SerializeField] private int points;
-        public override void OnArrowHit() => Pop();
+        public override void OnArrowHit(Arrow _arrow) => Pop();
 
         private void Pop()
         {
