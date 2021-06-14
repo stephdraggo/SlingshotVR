@@ -20,11 +20,7 @@ namespace Bow
                 }
             }
         }
-        void Stab()
-        {
-            
-            
-        }
+
         
         /*private void OnCollisionEnter(Collision _collision)
         {

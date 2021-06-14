@@ -29,7 +29,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/LoadLevel.cs" />
       <option value="$PROJECT_DIR$/Assets/BigBoi/Menus/OptionsMenuSystem/VolumeSlider.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRLoadScene.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Bow.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bow/GameControl.cs" />
       <option value="$PROJECT_DIR$/Assets/Wakaba/VR/VrControllerInput.cs" />
       <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Pointer.cs" />
@@ -38,8 +37,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Balloon.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bow/HittableObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Arrow.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/TargetScore.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInputModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TargetScore.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Bow.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1se3fvVKQE93PIQc4flcti1gSPm" />
@@ -103,7 +103,8 @@
       <workItem from="1623058382392" duration="964000" />
       <workItem from="1623060483716" duration="489000" />
       <workItem from="1623132067923" duration="3531000" />
-      <workItem from="1623641756378" duration="2751000" />
+      <workItem from="1623641756378" duration="4923000" />
+      <workItem from="1623649907254" duration="1647000" />
     </task>
     <servers />
   </component>
