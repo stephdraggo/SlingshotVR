@@ -9,7 +9,8 @@ namespace Bow
 
         private void Pop()
         {
-            GameControl.AddScore(points);
+            if (Wakaba.VR.VrUtils.IsVREnabled() == true) GameControl.AddScore(points);
+            else GameControlPC.AddScore(points);
             Destroy(gameObject);
         }
     }

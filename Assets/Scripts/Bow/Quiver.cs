@@ -37,5 +37,4 @@ namespace Bow
             GameControl.instance.SetArrowText("Arrows: " + arrowCount);
         }
     }
-
 }

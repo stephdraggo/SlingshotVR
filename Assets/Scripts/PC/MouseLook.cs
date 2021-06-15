@@ -24,7 +24,7 @@ public class MouseLook : MonoBehaviour
     public void SetMouseLookEnabled(bool _enabled)
     {
         active = _enabled;
-        SetMouseVisible(_enabled);
+        SetMouseVisible(!_enabled);
     }
 
 

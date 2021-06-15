@@ -22,11 +22,11 @@ namespace PCBuild
 
         private void Start()
         {
-            if (GameControl.gameMode == GameMode.Strategic)
+            if (GameControlPC.gameMode == GameMode.Strategic)
             {
                 limitedArrows = true;
                 arrows = maxArrows;
-                GameControl.instance.SetArrowText("Arrows: " + arrows);
+                GameControlPC.instance.SetArrowText("Arrows: " + arrows);
             }
         }
 
@@ -42,7 +42,7 @@ namespace PCBuild
                 if (Input.GetMouseButtonDown(0))
                 {
                     ShootArrow();
-                    if (limitedArrows) GameControl.instance.SetArrowText("Arrows: " + arrows);
+                    if (limitedArrows) GameControlPC.instance.SetArrowText("Arrows: " + arrows);
                     reloadTimer = reload;
                 }
             }
