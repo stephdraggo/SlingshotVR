@@ -13,7 +13,7 @@ namespace SlingShotVR.Menus
     {
         [SerializeField] private SteamVR_Action_Boolean clickAction;
 
-        [SerializeField] private LayerMask uiMask = LayerMask.NameToLayer("UI");
+        [SerializeField] private LayerMask uiMask;
 
         [SerializeField] private Pointer pointer;
         private VRInputModule inputModule;

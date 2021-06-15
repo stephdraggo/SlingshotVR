@@ -8,12 +8,13 @@ namespace Wakaba.VR
         public Vector3 EndPoint { get; private set; } = Vector3.zero;
         public bool Active { get;  set; } = false;
 
+        public bool Hide { get; set; } = false;
+
         public VrController controller;
 
         [SerializeField] private float cursorScaleFactor = 0.1f;
         [SerializeField] private Color invalid = Color.red;
         [SerializeField] private Color valid = Color.green;
-
         private Transform tracer;
         private Transform cursor;
 
@@ -32,8 +33,13 @@ namespace Wakaba.VR
 
         private void Update()
         {
-            if (!Active) return;
-
+            bool show = Active && !Hide;
+            
+            tracer.gameObject.SetActive(show);
+            cursor.gameObject.SetActive(show);
+            
+            if (!show) return;
+            
             bool didHit = Physics.Raycast(controller.transform.position, controller.transform.forward, out RaycastHit hit);
             EndPoint = didHit ? hit.point : Vector3.zero;
             UpdateScalePos(hit, didHit);

@@ -1,4 +1,3 @@
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Wakaba.VR;
@@ -46,7 +45,7 @@ namespace Bow
         [Header("Return to player")] 
         [SerializeField] private Transform returnPoint;
 
-        [SerializeField] private float returnDistance = 5f;
+        [SerializeField] private float returnDistance = 3f;
         
         #endregion
 
@@ -144,7 +143,11 @@ namespace Bow
             //If the return point is set, go to it if far enough away
             if (!returnPoint) return;
             if (!Grabbed && Vector3.Distance(transform.position, returnPoint.position) > returnDistance)
+            {
                 transform.position = returnPoint.position;
+                Rigidbody.velocity = Vector3.zero;
+            }
+               
         }
         #endregion
         

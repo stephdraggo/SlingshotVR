@@ -11,19 +11,38 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PC/PlayerShoot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82EC470C-9131-4935-8AD0-C83AD628910C/d4/0caef474/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menus/VRLoadScene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bow/SetGameMode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Pause.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInput.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInputModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MouseLook.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PC/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PCArrow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PlayerShoot.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PC/MouseLook.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRUGUIPointer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Menus/LoadLevel.cs" />
+      <option value="$PROJECT_DIR$/Assets/BigBoi/Menus/OptionsMenuSystem/VolumeSlider.cs" />
+      <option value="$PROJECT_DIR$/Assets/Wakaba/VR/VrControllerInput.cs" />
       <option value="$PROJECT_DIR$/Assets/Wakaba/VR/Pointer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PC/PCArrow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Balloon.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/HittableObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Arrow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRInputModule.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TargetScore.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Bow.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Menus/VRLoadScene.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/SetGameMode.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Pause.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bow/Quiver.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bow/GameControl.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/PC/PlayerShoot.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1se3fvVKQE93PIQc4flcti1gSPm" />
@@ -44,6 +63,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Build/SlingshotVR.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\varve\OneDrive\Documents\Diploma\SlingshotVR\Build" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -75,7 +102,14 @@
       <updated>1621219338225</updated>
       <workItem from="1621219363023" duration="638000" />
       <workItem from="1622432712034" duration="3321000" />
-      <workItem from="1623024880347" duration="1507000" />
+      <workItem from="1623024880347" duration="749000" />
+      <workItem from="1623058382392" duration="964000" />
+      <workItem from="1623060483716" duration="489000" />
+      <workItem from="1623132067923" duration="3531000" />
+      <workItem from="1623641756378" duration="4923000" />
+      <workItem from="1623649907254" duration="1671000" />
+      <workItem from="1623656764423" duration="3535000" />
+      <workItem from="1623716232778" duration="425000" />
     </task>
     <servers />
   </component>

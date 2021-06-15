@@ -17,11 +17,11 @@ namespace Valve.VR
     public class SteamVR_Input_ActionSet_default : Valve.VR.SteamVR_ActionSet
     {
         
-        public virtual SteamVR_Action_Boolean InteractUI
+        public virtual SteamVR_Action_Boolean Grab
         {
             get
             {
-                return SteamVR_Actions.default_InteractUI;
+                return SteamVR_Actions.default_Grab;
             }
         }
         
@@ -33,11 +33,11 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Boolean Grab
+        public virtual SteamVR_Action_Boolean InteractUI
         {
             get
             {
-                return SteamVR_Actions.default_Grab;
+                return SteamVR_Actions.default_InteractUI;
             }
         }
         
@@ -102,6 +102,14 @@ namespace Valve.VR
             get
             {
                 return SteamVR_Actions.default_SnapTurnRight;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean Menu
+        {
+            get
+            {
+                return SteamVR_Actions.default_Menu;
             }
         }
         
