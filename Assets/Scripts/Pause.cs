@@ -9,6 +9,7 @@ public class Pause : MonoBehaviour
 
     [SerializeField] private UnityEvent pauseEvent;
     [SerializeField] private UnityEvent resumeEvent;
+    [SerializeField] private UnityEvent endEvent;
     private bool paused;
 
     [SerializeField] private Pointer leftPointer;
@@ -24,19 +25,26 @@ public class Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (end) return;
         if (pauseAction.stateDown)
         {
             if (paused) ResumeGame();
-            else PauseGame(); 
+            else PauseGame(false); 
         }
     }
 
-    public void PauseGame()
+    private bool end;
+    public void PauseGame(bool _end)
     {
-        pauseEvent.Invoke();
+        
         leftPointer.Hide = false;
         rightPointer.Hide = false;
         paused = true;
+
+        if (_end) endEvent.Invoke();
+        else pauseEvent.Invoke();
+
+        _end = end;
     }
 
     public void ResumeGame()

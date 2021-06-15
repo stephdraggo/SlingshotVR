@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bow;
 using UnityEngine;
 
 namespace PCBuild
@@ -9,11 +11,24 @@ namespace PCBuild
         [Header("Arrow prefab")]
         [SerializeField] PCArrow arrowPrefab;
         [SerializeField] float reload = 0.1f;
+        [SerializeField] private int maxArrows = 20;
+        [SerializeField] private int arrows;
+        [SerializeField] private bool limitedArrows;
 
         [SerializeField] Transform shootLocation;
 
         float reloadTimer;
 
+
+        private void Start()
+        {
+            if (GameControl.gameMode == GameMode.Strategic)
+            {
+                limitedArrows = true;
+                arrows = maxArrows;
+                GameControl.instance.SetArrowText("Arrows: " + arrows);
+            }
+        }
 
         private void Update()
         {
@@ -22,11 +37,12 @@ namespace PCBuild
 
         void MouseClickShoot()
         {
-            if (reloadTimer <= 0)
+            if (reloadTimer <= 0 && (arrows > 0 || !limitedArrows))
             {
                 if (Input.GetMouseButtonDown(0))
                 {
                     ShootArrow();
+                    if (limitedArrows) GameControl.instance.SetArrowText("Arrows: " + arrows);
                     reloadTimer = reload;
                 }
             }
@@ -40,6 +56,7 @@ namespace PCBuild
         {
             PCArrow arrow = Instantiate(arrowPrefab);
             arrow.Setup(shootLocation);
+            arrows--;
         }
 
    
